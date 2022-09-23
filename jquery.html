@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <button id="idClick">Click</button>
+    <button id="iddblClick">dblClick</button>
+    <button id="idMouseOver">MouseOver</button>
+
+    <div id="box" style="background-color: green; height: 200px; width: 200px;"></div>
+    <div id="box1" style="background-color: rgb(128, 0, 0); height: 200px; width: 200px;"></div>
+    <input type="text" name="input" id="idKeyPress">
+    <input type="text" name="input" id="idFocus">
+    <input type="text" name="input" id="idBlur">
+
+    <select id="idChange">
+        <option value="popy">popy</option>
+        <option value="belskuy">belskuy</option>
+        <option value="belly">belly</option>
+    </select>
+    <script>
+        $("#idChange").on("change",function(){
+            console.log(this.value)
+        })
+        // $("#idClick").on("click", function(){
+        //     alert("Click")
+        // })
+
+        // $("#iddblClick").on("dblclick", function(){
+        //     alert("dblClick")
+        // })
+
+        // $("#box").on("mouseover", function(){
+        //     alert("mouseover")
+        // })
+
+        // $("#box1").on("mouseleave", function(){
+        //     // alert("mouseleave")
+        // })
+
+        // $("#idKeyPress").on("keypress", function(){
+        //     // alert("keypress")
+        // })
+
+        // $("#idBlur").on("blur", function(){ //kehilangan fokus
+        //     // alert("focus")
+        //     console.log("blur")
+        // })
+
+        
+
+    </script>
+    
+</body>
+</html>

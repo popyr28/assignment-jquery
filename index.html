@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>latihan</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+    <div class="row mt-5">
+        <div class="container col-4 mt-3 mb-3">
+            <div class="card">
+                <div class="card-header text-center"><h3>Copy Text</h3></div>
+                <div class="card-body">
+                    <div id="textold">Bootcamp CIMB Niaga Jaya</div>
+                    <div id="textcopy"></div>
+                </div> 
+                <div class="card-footer text-center">
+                    <button type="button" class="btn btn-outline-primary" id="btnClick">Copy</button>
+                </div>
+            </div>
+        </div>
+        <div class="container col-4 mt-3 mb-3">
+            <div class="card">
+                <div class="card-header text-center"><h3>Save Selected Text</h3></div>
+                <div class="card-body">
+                    <div id="forResult" class="text-center mb-3"></div>
+                    <select id="result">
+                        <option value="Chiki Ball">Chiki Ball</option>
+                        <option value="Mochi  Strawberry">Mochi Strawberry</option>
+                        <option value="Es krim">Es krim</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="container col-4 mt-3 mb-3">
+            <div class="card">
+                <div class="card-header text-center"><h3>Highlight Text</h3></div>
+                <div class="card-body">
+                    <div id="textToHighlight" class="text-center mb-3">Bootcamp</div>
+                </div>
+                <div class="card-footer text-center">
+                    <button type="button" class="btn btn-outline-danger" id="btnHighlight">Add Highlight</button>
+                </div>
+            </div>
+        </div>
+        <div class="container col-4 mt-3 mb-3">
+            <div class="card">
+                <div class="card-header text-center"><h3>Show Input Text</h3></div>
+                <div class="card-body">
+                    <input type="text" id="input" class="form-control">
+                    <h1 id="resultInput"></h1>
+                </div>
+            </div>
+        </div>
+        <div class="container col-4 mt-3 mb-3">
+            <div class="card">
+                <div class="card-header text-center"><h3>Change Box Color</h3></div>
+                <span id="box" style="width: 100%; height: 100px; background-color: yellow;"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script>
+        $("#btnClick").on("click", function(){
+            var textold = $("#textold").text()
+            $("#textcopy").text(textold)
+        })
+
+        $("#result").on("change", function(){
+            var result = this.value
+            $("#forResult").text(result)
+        })
+
+        $("#btnHighlight").on("click", function(){
+            $("#textToHighlight").css({
+                "font-weight": "bold",
+                "color": "red"
+            })
+        })
+
+        $("#input").on("keyup", function(){
+            $("#resultInput").text(this.value)
+        })
+
+        $("#box").on("mouseover", function(){
+            $("#box").css("background-color", "red")
+        })
+
+        $("#box").on("mouseleave", function(){
+            $("#box").css("background-color", "yellow")
+        })
+    </script>
+</body>
+</html>
